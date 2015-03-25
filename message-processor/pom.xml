@@ -11,5 +11,16 @@
 
     <artifactId>market-trade-message-processor</artifactId>
     <packaging>ejb</packaging>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <ejbVersion>3.0</ejbVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
