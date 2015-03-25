@@ -12,6 +12,24 @@
     <artifactId>market-trade-processor-ear</artifactId>
     <packaging>ear</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.github.rapito</groupId>
+            <artifactId>market-trade-message-processor</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.github.rapito</groupId>
+            <artifactId>market-trade-message-consumer</artifactId>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.github.rapito</groupId>
+            <artifactId>market-trade-message-frontend</artifactId>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -21,6 +39,11 @@
                 <configuration>
                     <version>6</version>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
